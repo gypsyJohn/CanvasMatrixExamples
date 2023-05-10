@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ie.gypsy.canvasmatrixexamples.CanvasView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/canvasView"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="x++"
+        android:onClick="increaseXSkew"
+        android:id="@+id/xppButton"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="y++"
+        android:onClick="increaseYSkew"
+        android:id="@+id/yppButton"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/xppButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="x--"
+        android:onClick="decreaseXSkew"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/yppButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="y--"
+        android:onClick="decreaseYSkew"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/xppButton"
+        android:text="A++"
+        android:onClick="increaseAngle"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/yppButton"
+        app:layout_constraintLeft_toRightOf="@id/xppButton"
+        android:text="A--"
+        android:onClick="decreaseAngle"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
